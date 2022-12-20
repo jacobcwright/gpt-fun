@@ -7,7 +7,8 @@ function onOpen() {
 }
 
 function menuItem1() {
-    var YOUR_TOKEN = "";
+   // ADD YOUR OPEN AI TOKEN HERE
+   var YOUR_TOKEN = "";
    // Or DocumentApp or FormApp.
     var doc = DocumentApp.getActiveDocument();
     var body = doc.getBody();
@@ -18,7 +19,7 @@ function menuItem1() {
       "method": "post",
       "headers": {
         "Content-Type": "application/json",
-        "Authorization": YOUR_TOKEN
+        "Authorization": `Bearer ${YOUR_TOKEN}`
       },
       "payload": JSON.stringify({
         "model": "text-davinci-002",
